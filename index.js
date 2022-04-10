@@ -11,6 +11,25 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+// const titleCased = () => {
+//   return tutorials
+// }
+
+// // Input: Array name tutorials
+// // Output: A new array with only the first letter of each word capitalized
+// //  title case formatting
+
+// will have to use the map array method to go over each element of the array 
+// map() method takes in two arguments a callback and optional context
+
+
+const titleCased = () =>{
+  const Call = tutorials.map((string) =>{
+    return string.split(" ").map(word => {
+      return word.charAt(0).toUpperCase() + word.substring(1)
+    }).join(" ")
+  });
+  return Call;
 }
+
+
